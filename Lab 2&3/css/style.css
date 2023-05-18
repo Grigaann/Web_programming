@@ -1,30 +1,27 @@
 #bodyacc {
- background-color: whitesmoke;   
- color: lightsalmon;
- 
+ background-color: grey;
  font-family:'Times New Roman', Times, serif;
-            
-}
-
-#headeracc{
-    background-image: url(../img/fondhead.jpg);
-    
-
 }
 
 header{
-
-   width: 1420px;
-   max-height: 200px;
-            
+    background-image: url(../img/fondhead.jpg);
+    background-repeat: no-repeat;
+    position: center;
+    width: auto;
+    max-height: 150px;
+    padding: 10px;
+    box-shadow: 1px 4px 10px 0px cyan;
+    border: 1px solid lightblue;
 }
 
-section, ul, li{
+section{
+    margin-left: auto;
+    text-align: center justify;
+}
+
+ul, li{
     margin-left: auto;
     text-align: center;
-}
-
-ul{
     list-style: none;
 }
 
@@ -34,11 +31,26 @@ html{
 
 h1{
     text-align: center;
+    color:brown;
+    font-size: 50px;
 }
 h2{
     text-align : center;
+    color: lightsalmon;
+    font-size: 30px;
 }
 
 .text{
+    display: block;
+    font-size: medium;
     text-align: center;
+    color: white;
+}
+
+footer{
+    padding: 10px;
+    box-shadow: 10px 10px 2px 1px cyan;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }

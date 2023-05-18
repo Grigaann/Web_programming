@@ -1,3 +1,44 @@
-body{
-    background-color: aqua;
+#bodyacc {
+ background-color: whitesmoke;   
+ color: lightsalmon;
+ 
+ font-family:'Times New Roman', Times, serif;
+            
+}
+
+#headeracc{
+    background-image: url(../img/fondhead.jpg);
+    
+
+}
+
+header{
+
+   width: 1420px;
+   max-height: 200px;
+            
+}
+
+section, ul, li{
+    margin-left: auto;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    width : 100%;
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    text-align : center;
+}
+
+.text{
+    text-align: center;
 }

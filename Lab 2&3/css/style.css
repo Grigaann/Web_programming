@@ -1,5 +1,5 @@
 #bodyacc {
-    background-color: lightgrey;
+    background-color: grey;
     font-family:'Times New Roman', Times, serif;
 }
 
@@ -42,12 +42,16 @@ ul, li{
 }
 #menu li:first-child a{
     background-color: rgb(0,0,100);
+    margin-left: 600px;
+    margin-top: 500px;
 }
 #menu li:nth-child(2) a{
     background-color: rgb(0,0,150);
+    margin-left: 950px;
 }
 #menu li:nth-child(3) a{
     background-color: rgb(0,0,200);
+    margin-left : 1370px;
 }
 #menu li:hover a{
     color: blue;

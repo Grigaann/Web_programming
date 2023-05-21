@@ -29,29 +29,30 @@ ul, li{
 
 
 #menu ul{
+    list-style-type: none;
     padding: 0px;
-    margin: 0px;
     display: flex;
 }
 #menu a{
     text-decoration: none;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid darkblue;
+    box-shadow: 0px 0px 10px 1px darkblue;
     border-radius: 10px;
     color: white;
 }
+#menu li{
+    display: inline;
+    margin: 20px;
+}
 #menu li:first-child a{
     background-color: rgb(0,0,100);
-    margin-left: 600px;
-    margin-top: 500px;
 }
 #menu li:nth-child(2) a{
     background-color: rgb(0,0,150);
-    margin-left: 950px;
 }
 #menu li:nth-child(3) a{
     background-color: rgb(0,0,200);
-    margin-left : 1370px;
 }
 #menu li:hover a{
     color: blue;

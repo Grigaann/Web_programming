@@ -1,5 +1,5 @@
 #bodyacc {
-    background-color: grey;
+    background-color: lightgrey;
     font-family:'Times New Roman', Times, serif;
 }
 
@@ -79,11 +79,10 @@ h2{
     display: block;
     font-size: medium;
     text-align: center;
-    color: white;
+    color: blue;
 }
 
 #info_table {
-    border-collapse: collapse;
     width: 100%;
     font-size: 15px;
     color: blue;
@@ -92,7 +91,6 @@ h2{
     margin-top: 3%;
     margin-bottom: 20px;
 }
-
 .c1 {
     background-color: purple;
 }
@@ -108,19 +106,24 @@ h2{
 
 #addPWD{
     background-color: grey;
-    border-collapse: collapse;
-    width: auto;
+    width: 53%;
     font-size: 15px;
     color: blue;
     font-family: monospace;
     text-align: center;
     margin: 3%;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 1px black;
 }
-#addPWD fieldset:nth-child(2) a{
-    color: black;
+#addPWD fieldset legend{
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+#addPWD fieldset{
+    margin: 2%;
+    border-radius: 10px;
 }
 .submitbutton{
     color: white;
@@ -129,6 +132,26 @@ h2{
 .resetbutton{
     color: white;
     background-color: red;
+}
+
+#PWD_table{
+    background-color: grey;
+    width: 80%;
+    font-size: 15px;
+    color: blue;
+    font-family: monospace;
+    text-align: center;
+    margin: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 1px black;
+}
+#PWD_table{
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 

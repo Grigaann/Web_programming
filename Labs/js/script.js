@@ -62,7 +62,6 @@ function generate(){
             col4.textContent = myForm.site.value;
             col5.textContent = password;
             duration.textContent = "0";
-            setInterval(increase_duration, 1000);
 
 
             console.log(password+"\n");
@@ -83,6 +82,8 @@ function generate(){
         }while ((check_min==false) || (check_maj==false) || (check_chiffre==false) || (check_symbole==false));
 
         alert("Your password has been added :)");
+        
+        setInterval(increase_duration, 1000);
     }
 }
 

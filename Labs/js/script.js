@@ -4,18 +4,25 @@ function welcome(){
     alert("Your password has not been added :)");
 }
 
+
 function generate(){
+
     var myForm = document.forms.ajoutPWD;
     console.log(myForm);
 
+    
     var newLine = document.createElement("tr");
     var col1 = document.createElement("td");
     var col2 = document.createElement("td");
     var col3 = document.createElement("td");
     var col4 = document.createElement("td");
     var col5 = document.createElement("td");
+    col5.className = "pwd_column";
 
-    newLine.append(col1, col2, col3, col4, col5);
+    var duration = document.createElement("td");
+    duration.classList.add("duration");
+
+    newLine.append(col1, col2, col3, col4, col5, duration);
 
     var idTab = document.getElementById("PWD_table");
     idTab.appendChild(newLine);
@@ -27,8 +34,8 @@ function generate(){
     
     if (validateform(myForm)){
         do{
-            var password = "";
-            var listechar = "";
+            let password = "";
+            let listechar = "";
 
 
             if (myForm.elements["Minuscule"].checked) {
@@ -43,7 +50,7 @@ function generate(){
             if (myForm.elements["Symbole"].checked) {
                 listechar += symbole;
             }
-            for (var i = 0; i < myForm.Nombre.value; i++) {
+            for (let i = 0; i < myForm.Nombre.value; i++) {
                 random_value = Math.floor(Math.random() * listechar.length);
                 password += listechar.substring(random_value, random_value + 1);
             }
@@ -54,25 +61,24 @@ function generate(){
             col3.textContent = `Usage ${myForm.Categories.value}`;
             col4.textContent = myForm.site.value;
             col5.textContent = password;
+            duration.textContent = "0";
+            setInterval(increase_duration, 1000);
+
 
             console.log(password+"\n");
 
             var check_min, check_maj, check_chiffre, check_symbole = true;
             if (myForm.elements["Minuscule"].checked) {
                 check_min = password_isgreatenough(password, minuscule);
-                console.log("check_min = "+check_min);
             }
             if (myForm.elements["Majuscule"].checked) {
                 check_maj = password_isgreatenough(password, majuscule);
-                console.log("check_maj = "+check_maj);
             }
             if (myForm.elements["Chiffre"].checked) {
                 check_chiffre = password_isgreatenough(password, chiffre);
-                console.log("check_chiffre = "+check_chiffre);
             }
             if (myForm.elements["Symbole"].checked) {
                 check_symbole = password_isgreatenough(password, symbole);
-                console.log("check_symbole = "+check_symbole);
             }
         }while ((check_min==false) || (check_maj==false) || (check_chiffre==false) || (check_symbole==false));
 
@@ -82,9 +88,9 @@ function generate(){
 
 
 function validateform(myForm){
-    var okay = false;
-    var checkboxs = myForm.elements;
-    for(var i=0; i<checkboxs.length; i++){
+    let okay = false;
+    let checkboxs = myForm.elements;
+    for(let i=0; i<checkboxs.length; i++){
         if(checkboxs[i].checked){
             okay=true;
             break;
@@ -113,12 +119,29 @@ function validateform(myForm){
 }
 
 function password_isgreatenough(pwd, listechar){
-    for (var letter=0; letter < pwd.length; letter++){
-        for (var char=0; char < listechar.length; char++){
+    for (let letter=0; letter < pwd.length; letter++){
+        for (let char=0; char < listechar.length; char++){
             if (pwd[letter] == listechar[char]){
                 return true;
             }
         }
     }
     return false;
+}
+
+function increase_duration(){
+    let durations = document.getElementsByClassName("duration")
+    let pwd_column = document.getElementsByClassName("pwd_column");
+    if (durations.length != 0) {
+        Array.prototype.forEach.call(durations, function(element_of_durations) {
+            let value = parseInt(element_of_durations.textContent);
+            if (value < 15){
+                element_of_durations.textContent = value + 1;
+            }
+            else{
+                element_of_durations.style.color = "lightgray";
+                element_of_durations.previousSibling.textContent = "Expired!";
+            }
+        });
+    }
 }

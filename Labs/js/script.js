@@ -34,7 +34,7 @@ function generate(){
     
     if (validateform(myForm)){
         do{
-            let password = "";
+            var password = "";
             let listechar = "";
 
 
@@ -81,10 +81,16 @@ function generate(){
             }
         }while ((check_min==false) || (check_maj==false) || (check_chiffre==false) || (check_symbole==false));
 
-        alert("Your password has been added :)");
         
-        setInterval(increase_duration, 1000);
+
+        alert("Your password has been added :)");
     }
+    setInterval(increase_duration, 1000);
+
+    document.ajoutPWD.reset();
+
+    PWD_Entered(password);
+    
 }
 
 
@@ -131,18 +137,53 @@ function password_isgreatenough(pwd, listechar){
 }
 
 function increase_duration(){
+    let timelimit = 15;
     let durations = document.getElementsByClassName("duration")
     let pwd_column = document.getElementsByClassName("pwd_column");
     if (durations.length != 0) {
         Array.prototype.forEach.call(durations, function(element_of_durations) {
             let value = parseInt(element_of_durations.textContent);
-            if (value < 15){
+            if (value < timelimit){
                 element_of_durations.textContent = value + 1;
             }
-            else{
+            else if (value === timelimit){
                 element_of_durations.style.color = "lightgray";
                 element_of_durations.previousSibling.textContent = "Expired!";
             }
         });
     }
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function() { 
+    document.querySelector('#addPWD').addEventListener('submit',function(e){
+        generate();
+    }); 
+});
+
+function delete_PWD(){
+    let myTable = document.getElementById('PWD_table')
+    if(confirm("Do you really want to delete all the passwords ?")){
+        document.ajoutPWD.submit();
+        for (let row=1;row<myTable.rows.length;row++){
+            myTable.removeChild(row)
+        }
+    }
+}
+
+function PWD_Entered(password){
+
+    var myForm = document.forms.ajoutPWD;
+    const NewPwd = {
+        number : myForm.Nombre.value,
+        date : myForm.date.value,
+        categorie : myForm.categories.value,
+        site : myForm.site.value,
+        pwd : password,
+    }
+
+    console.log(NewPwd);
+}
+
+

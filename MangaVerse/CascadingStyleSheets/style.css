@@ -1,10 +1,128 @@
-header{
-    background-image: url(../images/hdr-ftr_background.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%, auto;
-    background-position: center;
+body{
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    color: blue;
 }
 
-#body_hp{
-    background-color: aliceblue;
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-image: url(../images/hdr-ftr_background.png);
+    background-size: 100%, auto;
+    background-position: top;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+header ul{
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    justify-content: right;
+}
+header li{
+    display: inline;
+    margin-right: 20px;
+}
+header a{
+    padding: 20px;
+    border-radius: 5%;
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+header a:hover{
+    color: blue;
+    background-color: lightblue;
+    transition: all .75s;
+}
+header.shrink{
+    height: 19850px;
+}
+
+
+h1{
+    text-align: center;
+}
+
+p{
+    width: 50%;
+    border: 1px dotted;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+#article_hp{
+    margin-top: 50px;
+    margin-right: 50%;
+    background-image: url(../images/manga_submit_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    text-align: center;
+    text-shadow:
+    0 0 30px whitesmoke,
+    0 0 10.5px whitesmoke,
+    0 0 10px whitesmoke,
+    0 0 9.5px whitesmoke,
+    0 0 9px whitesmoke, 
+    0 0 8.5px whitesmoke,
+    0 0 8px whitesmoke,
+    0 0 7.5px whitesmoke,
+    0 0 7px whitesmoke,
+    0 0 6.5px whitesmoke,
+    0 0 6px whitesmoke, 
+    0 0 5.5px whitesmoke,
+    0 0 5px whitesmoke,
+    0 0 4.5px whitesmoke,
+    0 0 4px whitesmoke,
+    0 0 3.5px whitesmoke,
+    0 0 3px whitesmoke,
+    0 0 2.5px whitesmoke,
+    0 0 2px whitesmoke,
+    0 0 1.5px whitesmoke,
+    0 0 1px whitesmoke,
+    0 0 0.5px whitesmoke,
+    0 0 0.2px whitesmoke,
+    0 0 0.1px whitesmoke,
+    0 0 0.05px whitesmoke;
+}
+#article_hp p{
+    border: none;
+    margin-bottom: 50px;
+}
+#article_hp a{
+    padding: 10px;
+    text-decoration: none;
+    color: blue;
+    border: 2px ridge lightblue;
+    border-radius: 30px;
+    background-color: transparent;
+}
+#article_hp a:hover{
+    text-shadow: none;
+    color: blue;
+    background-color: lightblue;
+    transition: all .75s;
+}
+
+
+footer{
+    margin-top: 30px;
+    position: bottom;
+    width: 100%;
+    bottom: 0;
+    background-image: url(../images/hdr-ftr_background.png);
+    background-size: 100%, auto;
+    background-position: bottom;
+    padding: 20px;
+}
+footer a{
+    color: white;
+    text-decoration: none;
 }

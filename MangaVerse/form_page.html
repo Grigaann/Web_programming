@@ -18,7 +18,43 @@
                 </ul>
             </div>
         </header>
-        <section><p>There will be a form here.</p></section>
+        <section>
+            <form method="post" name="addManga" action="#" class="box" id="addManga">
+                <fieldset>
+                    <legend>Manga's characteristics</legend>
+                    <label for="site">Manga's Name</label>
+                    <input type="text" id="name">
+                    &nbsp
+                    <label for="types">Manga's Type</label>
+                    <select name="type" id="types">
+                        <option value="">--Please choose a type--</option>
+                        <option value="shonen">Shonen</option>
+                        <option value="seinen">Seinen</option>
+                        <option value="romance">Romance</option>
+                        <option value="shojo">shojo</option>
+                    </select>
+                    <div id="characteristics">
+                        <label for="Length" class="characteristics">Length</label>
+                        <input type="number" id="Length" min="1" max="999">
+                        &nbsp
+                        <label for="Date">Release Date</label>
+                        <input type="date">
+                    </div>
+                
+                    
+                </fieldset>
+                <fieldset>
+                    <legend>Primary elements</legend>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Finalize your manga!</legend>
+                    <input type="submit" value="Ajouter" class="submitbutton">
+                    <input type="reset" value="Supprimer" class="resetbutton">
+                </fieldset>
+            </form>
+        
+        </section>
         <footer>
             <a href="about.html">Contact us</a>
         </footer>

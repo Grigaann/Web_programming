@@ -143,3 +143,33 @@ footer a{
     color: white;
     text-decoration: none;
 }
+
+table {
+    width: 100%;
+    font-size: 15px;
+    color: blue;
+    font-family: monospace;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 20px;
+    padding: 10px;
+
+}
+
+th,td{
+    border: 1px solid;
+}
+
+#addManga{
+    width:50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 17px;
+
+}
+.characteristics{
+
+    margin-top:auto;
+
+}

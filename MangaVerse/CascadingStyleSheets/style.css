@@ -1,7 +1,11 @@
+html{
+    width : 100%;
+}
 body{
     width: 100%;
     margin-top: 0px;
     margin-left: 0px;
+    margin-right: 0px;
     padding: 0px;
     color: blue;
 }
@@ -10,7 +14,7 @@ header{
     position: sticky;
     top: 0;
     width: 100%;
-    background-image: url(../images/hdr-ftr_background.png);
+    background-image: url("../images/hdr-ftr_background.png");
     background-size: 100%, auto;
     background-position: top;
     padding: 10px;
@@ -24,7 +28,7 @@ header ul{
 }
 header li{
     display: inline;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 header a{
     padding: 20px;
@@ -55,15 +59,12 @@ p{
     margin: auto;
 }
 
-#article_hp{
-    margin-top: 50px;
-    margin-right: 50%;
-    background-image: url(../images/manga_submit_bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.article_hp{
+    display: inline-block;
+    margin-top: 1px;
     padding-top: 30%;
     padding-bottom: 30%;
+    font-size: 150%;
     text-align: center;
     text-shadow:
     0 0 30px whitesmoke,
@@ -92,23 +93,39 @@ p{
     0 0 0.1px whitesmoke,
     0 0 0.05px whitesmoke;
 }
-#article_hp p{
+.article_hp p{
     border: none;
     margin-bottom: 50px;
 }
-#article_hp a{
+.article_hp a{
     padding: 10px;
     text-decoration: none;
     color: blue;
-    border: 2px ridge lightblue;
+    border: 3px outset lightskyblue;
     border-radius: 30px;
     background-color: transparent;
 }
-#article_hp a:hover{
+.article_hp a:hover{
     text-shadow: none;
     color: blue;
     background-color: lightblue;
     transition: all .75s;
+    border: none;
+}
+#article_hp_1{
+    width: 49.5%;
+    background-image: url(../images/manga_submit_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#article_hp_2{
+    margin-top: 100px;
+    width: 49.5%; 
+    background-image: url(../images/manga_list_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 

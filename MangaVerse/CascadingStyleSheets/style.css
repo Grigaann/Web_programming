@@ -42,9 +42,6 @@ header a:hover{
     background-color: lightblue;
     transition: all .75s;
 }
-header.shrink{
-    height: 19850px;
-}
 
 
 h1{
@@ -128,20 +125,22 @@ p{
     background-size: contain;
 }
 
-#formulaire{
-    padding-top: 3px;
-    padding-bottom: 50px;
+
+
+#addManga{
+    width: 70%;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    font-size: 17px;
+    padding-top: 3px;
+    padding-bottom: 50px;
     background-color: lightskyblue;
     border-radius: 10px;
     border: 1px outset;
 }
-
-
 fieldset{
-    width: 55%;
+    width: 27%;
     margin: auto;
     margin-top: 50px;
     border: 1px solid;
@@ -166,18 +165,17 @@ fieldset legend{
         0 0 0.1px whitesmoke,
         0 0 0.05px whitesmoke;
 }
-fieldset:first-child() label{
-    display: flex;
-    width: 35%;
-}
-fieldset:nth-child(2) label{
-    display: flex;
-    justify-content: left;
-}
 fieldset input, fieldset textarea, fieldset select{
     border: 1px solid;
     border-radius: 10px;
     padding: 5px;
+}
+fieldset:first-child() label{
+    display: flex;
+    width: 35%;
+}
+#synopsis, .Characters{
+    width: 80%;
 }
 #boutonMore, .boutonLess{
     margin-left: 5px;
@@ -192,9 +190,6 @@ fieldset input[type="submit"]{
 fieldset input[type="submit"]:hover{
     background-color: lightcyan;
     transition: all .75s;
-}
-input[name="characters"]{
-    margin-right: 5px;
 }
 
 
@@ -217,21 +212,6 @@ th,td{
 }
 tbody :hover{
     background-color: lightcyan;
-}
-
-
-#addManga{
-    width:50%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 17px;
-
-}
-.characteristics{
-
-    margin-top:auto;
-
 }
 
 

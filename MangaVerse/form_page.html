@@ -18,41 +18,71 @@
                 </ul>
             </div>
         </header>
-        <section>
-            <form method="post" name="addManga" action="#" class="box" id="addManga">
-                <fieldset>
-                    <legend>Manga's characteristics</legend>
-                    <label for="site">Manga's Name</label>
-                    <input type="text" id="name">
-                    &nbsp
-                    <label for="types">Manga's Type</label>
-                    <select name="type" id="types">
-                        <option value="">--Please choose a type--</option>
-                        <option value="shonen">Shonen</option>
-                        <option value="seinen">Seinen</option>
-                        <option value="romance">Romance</option>
-                        <option value="shojo">shojo</option>
-                    </select>
-                    <div id="characteristics">
-                        <label for="Length" class="characteristics">Length</label>
-                        <input type="number" id="Length" min="1" max="999">
+        <div id="formulaire">
+            <h1>Keep it up to date and add the manga we should not have forgot</h1>
+            <section>
+                <form method="post" name="addManga" action="#" class="box" id="addManga" onsubmit="return false">
+                    <fieldset>
+                        <legend>The main characteristics of your Manga</legend>
+                        <label for="site">Title: </label>
+                        <input type="text" id="name" placeholder="Name the title of the manga"><br>
                         &nbsp
-                        <label for="Date">Release Date</label>
-                        <input type="date">
-                    </div>
-                
-                    
-                </fieldset>
-                <fieldset>
-                    <legend>Primary elements</legend>
-
-                </fieldset>
-                <fieldset>
-                    <legend>Finalize your manga!</legend>
-                    <input type="submit" value="Ajouter" class="submitbutton">
-                    <input type="reset" value="Supprimer" class="resetbutton">
-                </fieldset>
-            </form>
+                        <label for="types">Type: </label>
+                        <select name="type" id="types">
+                            <option value="">--Please choose a type--</option>
+                            <option value="Shōnen">Shōnen</option>
+                            <option value="Seinen">Seinen</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Shōjo">Shōjo</option>
+                        </select>
+                        <div id="characteristics">
+                            <label for="Length" class="characteristics">Number of chapters: </label>
+                            <input type="number" id="Length" min="1"><br>
+                            &nbsp
+                            <label for="state">State: </label>
+                            <select name="state" id="state">
+                                <option value="">--Please choose a state--</option>
+                                <option value="finished">Finished</option>
+                                <option value="ongoing">Ongoing</option>
+                            </select><br>
+                            &nbsp
+                            <label for="Date">Release date: </label>
+                            <input type="date" id="rDate">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Primary elements</legend>
+                        <div id="charactersList">
+                            <label for="characters">Some main characters: </label>
+                            <input type="text" class="Characters" id="character1" placeholder="character 1">
+                            <input type="button" onclick="addCharacter()" id="boutonMore" value="+">
+                        </div>
+                        <label for="synopsis">Synopsis: </label><br>
+                        <textarea id="synopsis" rows="5" cols="33" placeholder="Explain in a couple of sentences the story, without spoil!"></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Finalize your manga!</legend>
+                        <input type="submit" value="Ajouter" class="submitbutton">
+                    </fieldset>
+                </form>
+            </div>
+            
+            <main class="incoming">
+                <h1>Incoming additions (after verifications)</h1>
+                <table id="Nexts_table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Type</th>
+                            <th>Length</th>
+                            <th>Release Date</th>
+                            <th>State</th>
+                            <th>Some Main Characters</th>
+                            <th>Synopsis</th>
+                        </tr>
+                    </thead>
+                </table>
+            </main>
         
         </section>
         <footer>
